@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NUrecicla - Sustainable recycling solutions for Cabo Verde">
+    <meta name="keywords" content="recycling, sustainability, Cabo Verde, eco-friendly, waste management">
+    <meta name="theme-color" content="#10b981">
+    <title>NUrecicla</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="images/logo.png" alt="NUrecicla Logo" style="height: 80px;width: 80px;">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="controls-container">
+                    <div class="theme-toggle">
+                        <button id="theme-toggle-btn" aria-label="Toggle dark mode">
+                            <img src="images/moon-icon.png" alt="Dark mode" class="moon-icon">
+                            <img src="images/sun-icon.png" alt="Light mode" class="sun-icon">
+                            <span class="toggle-text">Dark Mode</span>
+                        </button>
+                    </div>
+                    <div class="language-selector">
+                        <button id="language-toggle-btn" aria-label="Change language">
+                            <img src="images/google-translate-icon.png" alt="Translate" class="translate-icon">
+                            <span class="current-language">EN</span>
+                        </button>
+                        <div class="language-dropdown">
+                            <button data-lang="en" class="lang-option"><span class="flag">🇬🇧</span> English</button>
+                            <button data-lang="pt" class="lang-option"><span class="flag">🇵🇹</span> Português</button>
+                            <button data-lang="es" class="lang-option"><span class="flag">🇪🇸</span> Español</button>
+                            <button data-lang="fr" class="lang-option"><span class="flag">🇫🇷</span> Français</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="hero">
+                <div class="hero-content">
+                    <span class="hero-badge">Eco-friendly Solution</span>
+                    <div class="re-concept">
+                        <h1><span>NU</span><span class="highlight" id="typing-text">recicla</span></h1>
+                    </div>
+                    <p>Join the sustainable revolution with NUrecicla - mapping recycling points, tracking your impact, and earning rewards while saving the planet.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary"><i class="fab fa-google-play"></i> Get on Google Play</a>
+                        <a href="#" class="btn btn-secondary"><i class="fab fa-apple"></i> Download on App Store</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-image-wrapper">
+                        <img src="images/recycling-illustration.png" alt="Recycling Illustration">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+<section id="about" class="about-section">
+    <div class="container">
+            <div class="section-header">
+                <h2>About NUrecicla</h2>
+                <p>Empowering communities in Cabo Verde through sustainable recycling solutions</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>NUrecicla is a pioneering platform dedicated to transforming waste management and promoting sustainability across Cabo Verde. Our mission is to create a cleaner, greener future by making recycling accessible, rewarding, and educational for everyone.</p>
+                    <p>Through our innovative mobile application, we connect users with recycling points, track environmental impact, and foster a community committed to positive change.</p>
+                </div>
+                <div class="about-image">
+                    <div class="slideshow-container">
+                        <div class="slideshow-image fade">
+                            <img src="images/about-image1.jpg" alt="Recycling in Cabo Verde 1">
+                        </div>
+                        <div class="slideshow-image fade">
+                            <img src="images/about-image2.jpg" alt="Recycling in Cabo Verde 2">
+                        </div>
+                        <div class="slideshow-image fade">
+                            <img src="images/about-image3.jpg" alt="Recycling in Cabo Verde 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Key Benefits</h2>
+                <p>Discover how NUrecicla makes sustainability simple and rewarding</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Recycling Point Mapping</h3>
+                    <p>Easily locate the nearest recycling points across Cabo Verde with our interactive map feature.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <h3>QR Code Registration</h3>
+                    <p>Simply scan QR codes to register your recycling activities and track your environmental contribution.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Rewards System</h3>
+                    <p>Earn points and rewards for your recycling efforts, redeemable with our partner businesses.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Environmental Education</h3>
+                    <p>Access educational resources about sustainability and proper recycling practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="impact-content">
+                <div class="impact-text">
+                    <h2>Our Impact</h2>
+                    <p>Together, we're making a difference in Cabo Verde's environment</p>
+                    <div class="impact-stats">
+                        <div class="stat">
+                            <h3>1000+</h3>
+                            <p>Active Users</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5000+</h3>
+                            <p>Recycling Actions</p>
+                        </div>
+                        <div class="stat">
+                            <h3>10+</h3>
+                            <p>Recycling Centers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="impact-image">
+                    <img src="images/impact-image.jpg" alt="Environmental Impact">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>O Que as Pessoas Dizem</h2>
+                <p>Ouça nossos usuários e parceiros sobre sua experiência com NUrecicla</p>
+            </div>
+            <div class="testimonials-container">
+                <button class="nav-btn prev-btn" aria-label="Depoimento anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="testimonials-slider">
+                    <div class="testimonial-slide active" data-index="0">
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote-icon">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                            <div class="testimonial-content">
+                                <p>"O NUrecicla transformou a forma como nossa comunidade aborda a reciclagem. O aplicativo facilita encontrar pontos de reciclagem e o sistema de recompensas mantém todos motivados!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="images/testimonial-1.jpg" alt="Maria Silva">
+                                <div class="author-info">
+                                    <h4>Maria Silva</h4>
+                                    <p>Moradora da Praia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide" data-index="1">
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote-icon">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                            <div class="testimonial-content">
+                                <p>"Como parceiro comercial, participar do programa de recompensas do NUrecicla tem sido ótimo para a imagem da nossa marca e atraiu clientes ambientalmente conscientes."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="images/testimonial-2.jpg" alt="João Santos">
+                                <div class="author-info">
+                                    <h4>João Santos</h4>
+                                    <p>Proprietário de Negócio Local</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide" data-index="2">
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote-icon">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                            <div class="testimonial-content">
+                                <p>"Os recursos educacionais do NUrecicla ajudaram nossa escola a ensinar os alunos sobre sustentabilidade de uma maneira prática e envolvente."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="images/testimonial-3.jpg" alt="Ana Ferreira">
+                                <div class="author-info">
+                                    <h4>Ana Ferreira</h4>
+                                    <p>Professora</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide" data-index="3">
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote-icon">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                            <div class="testimonial-content">
+                                <p>"Desde que comecei a usar o NUrecicla, me tornei muito mais consciente do meu impacto ambiental. O aplicativo tornou a reciclagem uma parte divertida da minha rotina diária."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="images/testimonial-4.jpg" alt="Carlos Mendes">
+                                <div class="author-info">
+                                    <h4>Carlos Mendes</h4>
+                                    <p>Estudante Universitário</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide" data-index="4">
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote-icon">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                            <div class="testimonial-content">
+                                <p>"Como turista visitando Cabo Verde, fiquei impressionada em encontrar uma solução de reciclagem tão inovadora. O NUrecicla facilitou ser ambientalmente responsável mesmo durante a viagem."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="images/testimonial-5.jpg" alt="Sofia Martins">
+                                <div class="author-info">
+                                    <h4>Sofia Martins</h4>
+                                    <p>Visitante Internacional</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="nav-btn next-btn" aria-label="Next testimonial">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <div class="testimonial-thumbnails">
+                <!-- Thumbnails will be added here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section">
+        <div class="container">
+            <div class="download-content">
+                <h2>Ready to Start Your Recycling Journey?</h2>
+                <p>Download the NUrecicla app today and join our community of eco-conscious individuals making a difference in Cabo Verde.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary"><i class="fab fa-google-play"></i> Get on Google Play</a>
+                    <a href="#" class="btn btn-secondary"><i class="fab fa-apple"></i> Download on App Store</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Have questions or suggestions? We'd love to hear from you!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>nurecicla@outlook.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+238 123 4567</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Praia, Cabo Verde</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/nurecicla.cv/" class="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="NUrecicla Logo">
+                    <p>Making sustainability accessible in Cabo Verde</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#benefits">Benefits</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NUrecicla. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EmailJS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/email-handler.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/slideshow.js"></script>
+    <script src="js/testimonial-carousel.js"></script>
+    <script src="js/card-effects.js"></script>
+</body>
+</html>
