@@ -1,0 +1,9 @@
+This is a placeholder file. This directory will contain all the images for the NUrecicla website including:
+- logo.png
+- favicon.ico
+- app-mockup.png
+- about-image.jpg
+- impact-image.jpg
+- testimonial-1.jpg
+- testimonial-2.jpg
+- testimonial-3.jpg
