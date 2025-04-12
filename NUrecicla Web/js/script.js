@@ -80,6 +80,28 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     })
     
+    // Add Intersection Observer for lazy loading
+    const lazyLoadOptions = {
+        root: null,
+        rootMargin: '50px',
+        threshold: 0.1
+    };
+
+    const lazyLoadElements = document.querySelectorAll('.benefit-card, .testimonial-card, .about-image, .impact-image');
+    const lazyLoadObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+                lazyLoadObserver.unobserve(entry.target);
+            }
+        });
+    }, lazyLoadOptions);
+
+    lazyLoadElements.forEach(el => {
+        el.classList.add('animate-element');
+        lazyLoadObserver.observe(el);
+    });
+
     // Testimonial Slider is handled by testimonial-carousel.js
     
     // Smooth scrolling for anchor links
