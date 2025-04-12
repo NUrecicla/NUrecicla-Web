@@ -173,39 +173,25 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', highlightNavLink);
     
     // Theme toggle functionality
-        const themeToggleBtn = document.getElementById("theme-toggle-btn");
-        const moonIcon = document.querySelector(".moon-icon");
-        const sunIcon = document.querySelector(".sun-icon");
-
-        // Verifica o tema preferido na primeira vez que o site for carregado
-        if (localStorage.getItem("theme") === "dark") {
-            document.body.classList.add("dark-theme");
-            moonIcon.style.display = "none";
-            sunIcon.style.display = "inline";
+    document.addEventListener("DOMContentLoaded", function() {
+      const themeToggleBtn = document.getElementById("themeToggleBtn");
+      const temaImg = document.getElementById("temaImg"); // referência à imagem
+    
+      themeToggleBtn.addEventListener("click", function() {
+        // Alterna o tema
+        document.body.classList.toggle("dark");
+    
+        // Verifica se o tema atual é dark e altera a imagem consoante
+        if (document.body.classList.contains("dark")) {
+          temaImg.src = "imagem-escuro.png"; // atualize com o nome do seu ficheiro para tema escuro
+          temaImg.alt = "Tema Escuro";
         } else {
-            document.body.classList.add("light-theme");
-            moonIcon.style.display = "inline";
-            sunIcon.style.display = "none";
+          temaImg.src = "imagem-claro.png"; // ficheiro para tema claro
+          temaImg.alt = "Tema Claro";
         }
+      });
+    });
 
-        // Adiciona o evento de clique para alternar o tema
-        themeToggleBtn.addEventListener("click", () => {
-            if (document.body.classList.contains("dark-theme")) {
-                // Muda para tema light
-                document.body.classList.remove("dark-theme");
-                document.body.classList.add("light-theme");
-                moonIcon.style.display = "inline";
-                sunIcon.style.display = "none";
-                localStorage.setItem("theme", "light"); // Salva a preferência do tema
-            } else {
-                // Muda para tema dark
-                document.body.classList.remove("light-theme");
-                document.body.classList.add("dark-theme");
-                moonIcon.style.display = "none";
-                sunIcon.style.display = "inline";
-                localStorage.setItem("theme", "dark"); // Salva a preferência do tema
-            }
-        });
     
     // Language switcher functionality
     const languageToggleBtn = document.getElementById('language-toggle-btn');
