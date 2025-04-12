@@ -173,52 +173,39 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', highlightNavLink);
     
     // Theme toggle functionality
-    const themeToggleBtn = document.getElementById('theme-toggle-btn');
-    
-    // Check for saved theme preference or use device preference
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    const savedTheme = localStorage.getItem('theme');
-    
-    if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-    }
-    
-    // Update button appearance based on current theme
-    function updateThemeToggleButton() {
-        const toggleText = themeToggleBtn.querySelector('.toggle-text');
-        if (document.documentElement.getAttribute('data-theme') === 'dark') {
-            themeToggleBtn.classList.add('dark-mode-active');
-            if (toggleText) toggleText.textContent = 'Light Mode';
+        const themeToggleBtn = document.getElementById("theme-toggle-btn");
+        const moonIcon = document.querySelector(".moon-icon");
+        const sunIcon = document.querySelector(".sun-icon");
+
+        // Verifica o tema preferido na primeira vez que o site for carregado
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark-theme");
+            moonIcon.style.display = "none";
+            sunIcon.style.display = "inline";
         } else {
-            themeToggleBtn.classList.remove('dark-mode-active');
-            if (toggleText) toggleText.textContent = 'Dark Mode';
+            document.body.classList.add("light-theme");
+            moonIcon.style.display = "inline";
+            sunIcon.style.display = "none";
         }
-    }
-    
-    updateThemeToggleButton();
-    
-    // Toggle theme when button is clicked
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', function() {
-            let currentTheme = document.documentElement.getAttribute('data-theme');
-            let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            // Add transition class to body for smooth color transitions
-            document.body.classList.add('theme-transition');
-            
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            
-            updateThemeToggleButton();
-            
-            // Remove transition class after transition completes
-            setTimeout(() => {
-                document.body.classList.remove('theme-transition');
-            }, 500);
+
+        // Adiciona o evento de clique para alternar o tema
+        themeToggleBtn.addEventListener("click", () => {
+            if (document.body.classList.contains("dark-theme")) {
+                // Muda para tema light
+                document.body.classList.remove("dark-theme");
+                document.body.classList.add("light-theme");
+                moonIcon.style.display = "inline";
+                sunIcon.style.display = "none";
+                localStorage.setItem("theme", "light"); // Salva a preferência do tema
+            } else {
+                // Muda para tema dark
+                document.body.classList.remove("light-theme");
+                document.body.classList.add("dark-theme");
+                moonIcon.style.display = "none";
+                sunIcon.style.display = "inline";
+                localStorage.setItem("theme", "dark"); // Salva a preferência do tema
+            }
         });
-    }
     
     // Language switcher functionality
     const languageToggleBtn = document.getElementById('language-toggle-btn');
