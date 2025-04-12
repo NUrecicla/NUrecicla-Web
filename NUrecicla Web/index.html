@@ -8,9 +8,51 @@
     <meta name="theme-color" content="#10b981">
     <title>NUrecicla</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="NUrecicla">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    
+    <!-- Critical CSS -->
+    <style>
+        /* Inline critical CSS */
+        :root {
+            --primary-color: #10b981;
+            --text-color: #1f2937;
+            --background-color: #ffffff;
+        }
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        header {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(59, 130, 246, 0.08));
+            padding: 20px 0;
+        }
+    </style>
+    
+    <!-- Defer non-critical CSS -->
+    <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </noscript>
 </head>
 <body>
     <!-- Header Section -->
@@ -18,7 +60,7 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <img src="images/logo.png" alt="NUrecicla Logo" style="height: 80px;width: 80px;">
+                    <img src="images/logo.png" alt="NUrecicla Logo" width="80" height="80">
                 </div>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
@@ -62,7 +104,7 @@
                 </div>
                 <div class="hero-image">
                     <div class="hero-image-wrapper">
-                        <img src="images/recycling-illustration.png" alt="Recycling Illustration">
+                        <img src="images/recycling-illustration.png" alt="Recycling Illustration" loading="lazy" width="600" height="400">
                     </div>
                 </div>
             </div>
@@ -84,13 +126,13 @@
                 <div class="about-image">
                     <div class="slideshow-container">
                         <div class="slideshow-image fade">
-                            <img src="images/about-image1.jpg" alt="Recycling in Cabo Verde 1">
+                            <img src="images/about-image1.jpg" alt="Recycling in Cabo Verde 1" loading="lazy" width="400" height="300">
                         </div>
                         <div class="slideshow-image fade">
-                            <img src="images/about-image2.jpg" alt="Recycling in Cabo Verde 2">
+                            <img src="images/about-image2.jpg" alt="Recycling in Cabo Verde 2" loading="lazy" width="400" height="300">
                         </div>
                         <div class="slideshow-image fade">
-                            <img src="images/about-image3.jpg" alt="Recycling in Cabo Verde 3">
+                            <img src="images/about-image3.jpg" alt="Recycling in Cabo Verde 3" loading="lazy" width="400" height="300">
                         </div>
                     </div>
                 </div>
@@ -161,7 +203,7 @@
                     </div>
                 </div>
                 <div class="impact-image">
-                    <img src="images/impact-image.jpg" alt="Environmental Impact">
+                    <img src="images/impact-image.jpg" alt="Environmental Impact" loading="lazy" width="500" height="350">
                 </div>
             </div>
         </div>
@@ -189,7 +231,7 @@
                                 <p>"O NUrecicla transformou a forma como nossa comunidade aborda a reciclagem. O aplicativo facilita encontrar pontos de reciclagem e o sistema de recompensas mantém todos motivados!"</p>
                             </div>
                             <div class="testimonial-author">
-                                <img src="images/testimonial-1.jpg" alt="Maria Silva">
+                                <img src="images/testimonial-1.jpg" alt="Maria Silva" loading="lazy" width="50" height="50">
                                 <div class="author-info">
                                     <h4>Maria Silva</h4>
                                     <p>Moradora da Praia</p>
@@ -379,15 +421,37 @@
         </div>
     </footer>
 
-    <!-- EmailJS Library -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Move all scripts to the end of body and optimize loading -->
+    <!-- Critical scripts -->
+    <script>
+        // Inline critical initialization
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <!-- Third-party libraries with defer -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
     
-    <!-- Custom Scripts -->
-    <script src="js/translations.js"></script>
-    <script src="js/email-handler.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/slideshow.js"></script>
-    <script src="js/testimonial-carousel.js"></script>
-    <script src="js/card-effects.js"></script>
+    <!-- Combined and minified app scripts -->
+    <script src="js/translations.js" defer></script>
+    <script src="js/script.js" type="module" defer></script>
+    <script src="js/slideshow.js" type="module" defer></script>
+    <script src="js/testimonial-carousel.js" type="module" defer></script>
+    <script src="js/card-effects.js" type="module" defer></script>
+    <script src="js/email-handler.js" type="module" defer></script>
+    <script>
+        // Register Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/js/sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registered:', registration);
+                    })
+                    .catch(error => {
+                        console.log('ServiceWorker registration failed:', error);
+                    });
+            });
+        }
+    </script>
 </body>
 </html>
